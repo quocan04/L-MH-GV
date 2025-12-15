@@ -8,6 +8,10 @@ android {
         version = release(36)
     }
 
+    buildFeatures {
+        buildConfig = true
+    }
+
     defaultConfig {
         applicationId = "com.teamforone.quanlysinhvien"
         minSdk = 24
@@ -16,6 +20,11 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField(
+            "String",
+            "DB_NAME_ENCODED",
+            "\"ZGF0YWJhc2VzL1FMU1YuZGI=\""
+        )
     }
 
     buildTypes {
