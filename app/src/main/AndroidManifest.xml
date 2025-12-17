@@ -39,6 +39,18 @@
             android:exported="false"
             android:label="Cập Nhật Sinh Viên"
             android:parentActivityName=".ui.QuanLySinhVien" />
+        <activity
+            android:name=".ui.DanhSachBuoiHocActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".ui.DiemDanhActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".ui.TaoBuoiHocActivity"
+            android:exported="false"/>
+
+
+
     </application>
 
 </manifest>

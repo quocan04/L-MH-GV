@@ -67,11 +67,11 @@ public class MainActivity extends AppCompatActivity {
                 setAllCardsVisible(true);
                 break;
             case TEACHER:
-                cardAccountManagement.setVisibility(View.GONE); // không quản lý tài khoản
+                cardAccountManagement.setVisibility(View.GONE);
                 cardAttendance.setVisibility(View.VISIBLE);
                 cardClassManagement.setVisibility(View.VISIBLE);
                 cardSubjectManagement.setVisibility(View.VISIBLE);
-                cardTeacherManagement.setVisibility(View.GONE); // không quản lý giáo viên khác
+                cardTeacherManagement.setVisibility(View.GONE);
                 cardStatistics.setVisibility(View.VISIBLE);
                 cardStudentManagement.setVisibility(View.VISIBLE);
                 break;
@@ -100,9 +100,46 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupClickListeners() {
-        cardStudentManagement.setOnClickListener(v -> startActivity(new Intent(this, QuanLySinhVien.class)));
-        // TODO: Thêm các activity khác khi sẵn sàng
-        cardLogout.setOnClickListener(v -> showLogoutDialog());
+        // Quản lý sinh viên
+        cardStudentManagement.setOnClickListener(v -> {
+            startActivity(new Intent(this, QuanLySinhVien.class));
+        });
+
+        // Điểm danh - Chuyển đến DanhSachBuoiHocActivity
+        cardAttendance.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, DanhSachBuoiHocActivity.class);
+            startActivity(intent);
+        });
+
+        // Quản lý lớp
+        cardClassManagement.setOnClickListener(v -> {
+            Toast.makeText(this, "Chức năng đang phát triển", Toast.LENGTH_SHORT).show();
+        });
+
+        // Quản lý môn học
+        cardSubjectManagement.setOnClickListener(v -> {
+            Toast.makeText(this, "Chức năng đang phát triển", Toast.LENGTH_SHORT).show();
+        });
+
+        // Quản lý giảng viên
+        cardTeacherManagement.setOnClickListener(v -> {
+            Toast.makeText(this, "Chức năng đang phát triển", Toast.LENGTH_SHORT).show();
+        });
+
+        // Quản lý tài khoản
+        cardAccountManagement.setOnClickListener(v -> {
+            Toast.makeText(this, "Chức năng đang phát triển", Toast.LENGTH_SHORT).show();
+        });
+
+        // Thống kê báo cáo
+        cardStatistics.setOnClickListener(v -> {
+            Toast.makeText(this, "Chức năng đang phát triển", Toast.LENGTH_SHORT).show();
+        });
+
+        // Đăng xuất
+        cardLogout.setOnClickListener(v -> {
+            showLogoutDialog();
+        });
     }
 
     private void showLogoutDialog() {
