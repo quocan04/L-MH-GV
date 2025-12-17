@@ -39,6 +39,24 @@
             android:exported="false"
             android:label="Cập Nhật Sinh Viên"
             android:parentActivityName=".ui.QuanLySinhVien" />
+
+        <!-- Thêm các activity còn thiếu -->
+        <activity
+            android:name=".ui.QuanLyLopActivity"
+            android:exported="false"
+            android:label="Quản Lý Lớp"
+            android:parentActivityName=".ui.MainActivity" />
+        <activity
+            android:name=".ui.QuanLyMonHocActivity"
+            android:exported="false"
+            android:label="Quản Lý Môn Học"
+            android:parentActivityName=".ui.MainActivity" />
+        <activity
+            android:name=".ui.QuanLyGiangVienActivity"
+            android:exported="false"
+            android:label="Quản Lý Giảng Viên"
+            android:parentActivityName=".ui.MainActivity" />
+        <activity android:name=".ui.ReportActivity"/>
         <activity
             android:name=".ui.DanhSachBuoiHocActivity"
             android:exported="false"/>
