@@ -16,7 +16,7 @@ public final class DatabaseProvider {
     // Private constructor
     private DatabaseProvider(Context context) {
         // Lấy instance DatabaseHelper (Singleton)
-        databaseHelper = DatabaseHelper.getInstance(context.getApplicationContext());
+        databaseHelper = DatabaseHelper.getInstance(context.getApplicationContext(), "QLSV.db");
         // Chuẩn bị database (copy từ assets nếu chưa có)
         databaseHelper.prepareDatabase();
     }
